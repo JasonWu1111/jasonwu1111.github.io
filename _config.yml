@@ -1,87 +1,108 @@
 # Site settings
-title:       Jason's Blog
-email:       jasonwu19960210@gmail.com
-author:      JasonWu
-description: "我的 Android 学习笔记"
-baseurl:     ""
-url:         "https://github.com/JasonWu1111"
-date_format: "%b %-d, %Y"
-header_pages:
- - about.md
- - contact.html
+title: Jason's Blogs
+SEOTitle: Jason 的博客 | Jason's Blogs
+header-img: img/home-bg.jpg
+email: jasonwu19960210@gmail.com
+description: "关于程序与设计，与你一起发现更大的世界。"
+keyword: "Android, Developer, Linux, 博客, 个人网站, 互联网, 设计"
+url: "https://huangxuan.me"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-google_analytics:
+# Publish posts or collection documents with a future date.
+future: true
 
-# Optional features
-animated:             true
-show_related_posts:   true
-show_post_footers:    false
-show_social_icons:    true
+# SNS settings
+RSS: false
+zhihu_username:     wo-huan-xiao-bu-dong-ni-men-da-ren
+github_username:    jasonwu1111
+twitter_username:   Jason_Wuuu
+#facebook_username:  jasonwu
+#linkedin_username:  jasonwu
 
-# Preview image for social media aka og:image and twitter:image
-post_preview_image: false
 
-# Disqus post comments
-disqus_shortname:
-
-# Social icons
-github_username: saikiransripada
-twitter_username: wp_user
-linkedin_username: saikiransripada
-dev_username: dev_user
-
-# Post sharing icons
-show_sharing_icons: true
-# Change to 'true' to enable individual icons
-share_facebook: true
-share_twitter: true
-share_googleplus: true
-share_linkedin: true
-share_digg: true
-share_tumblr: true
-share_reddit: true
-share_stumbleupon: true
-share_hackernews: true
-
-text:
-  pagination:
-    newer: 'Newer'
-    older: 'Older'
-  share_buttons:
-    text:         'Share:'
-    facebook:     'Share on Facebook'
-    twitter:      'Share on Twitter'
-    googleplus:   'Share on Google+'
-    linkedin:     'Share on LinkedIn'
-    digg:         'Share on Digg'
-    tumblr:       'Share on Tumblr'
-    reddit:       'Share on Reddit'
-    stumbleupon:  'Share on StumbleUpon'
-    hackernews:   'Share on Hacker News'
-  post:
-    updated:        'Updated'
-    minute_read:    'minute read'
-    related_posts:  'Related Posts'
-    post_footer:    'Lorem ipsum'
-  index:
-    coming_soon: 'Coming soon...'
-  og_locale: 'en_US'
 
 # Build settings
-markdown:     kramdown
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    :title
-paginate:     4
-sass:
-  style: compressed
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
-  - README.md
-  - vendor
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+
+# Disqus settings
+disqus_username: hux
+
+# Netease settings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "芜湖起飞～"
+sidebar-avatar: /img/avatar.gif     # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+
+
+# Friends
+# friends: [
+    # {
+    #     title: "Su",
+    #     href: "http://su.gallery/"
+    # }
+# ]
