@@ -1,6 +1,7 @@
 ---
 layout: post
 title: View 的测量与布局
+author: JasonWu
 tags:
   - Android
   - View

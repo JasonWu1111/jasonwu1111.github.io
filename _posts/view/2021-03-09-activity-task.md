@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Activity 任务、亲和关系与启动模式
+author: JasonWu
 tags:
   - Android
   - Activity

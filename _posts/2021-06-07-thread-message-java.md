@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android 线程消息机制（一）—— Java 层消息模型
+author: JasonWu
 tags:
   - Android
   - Thread

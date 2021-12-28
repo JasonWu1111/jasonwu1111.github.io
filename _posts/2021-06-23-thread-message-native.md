@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android 线程消息机制（二）—— Native 消息处理
+author: JasonWuv
 tags:
   - Android
   - Thread

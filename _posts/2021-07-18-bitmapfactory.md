@@ -1,6 +1,7 @@
 ---
 layout: post
 title: BitmapFactory 的使用和原理分析
+author: JasonWu
 tags:
   - Android
   - Bitmap

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Activity 的启动过程分析
+author: JasonWu
 tags:
   - Android
   - Activity

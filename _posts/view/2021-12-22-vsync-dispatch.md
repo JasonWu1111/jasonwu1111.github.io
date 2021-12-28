@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android 图形系统（四）—— VSYNC 在应用端的分发流程
+author: JasonWu
 tags:
   - Android
   - Graphics

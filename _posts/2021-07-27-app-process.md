@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 应用进程的创建流程分析
+author: JasonWu
 tags:
   - Android
   - Process

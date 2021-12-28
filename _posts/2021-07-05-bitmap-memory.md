@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bitmap 的内存管理及原理
+author: JasonWu
 tags:
   - Android
   - Bitmap

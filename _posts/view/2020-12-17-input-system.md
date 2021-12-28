@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Input 系统触摸事件分发原理
+author: JasonWu
 tags:
   - Android
   - View

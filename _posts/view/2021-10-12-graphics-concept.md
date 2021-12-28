@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android 图形系统（一）—— 概念综述
+author: JasonWu
 tags:
   - Android
   - Graphics

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: View 触摸事件的分发
+author: JasonWu
 tags:
   - Android
   - View

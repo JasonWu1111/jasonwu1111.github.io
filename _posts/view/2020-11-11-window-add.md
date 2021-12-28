@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Window 的添加过程
+author: JasonWu
 tags:
   - Android
   - View

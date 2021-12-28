@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android 图形系统（二）—— SurfaceFlinger 的启动与初始化
+author: JasonWu
 tags:
   - Android
   - Graphics
