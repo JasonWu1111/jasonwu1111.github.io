@@ -30,7 +30,7 @@ tags:
 ### 基础组件启动触发进程创建
 启动一个应用的任一四大基础组件 **Activity**、**Service**、**ContentProvider** 和 **BroadcastReceiver** 都可以通过系统进程来创建该目标应用的进程。一个组件
 
-以 [Activity 的启动为例](http://127.0.0.1:4000/2021/03/16/activity-launch/)，发起调用的进程（如 launcher 进程）会通过 **Binder** 与 `system_server` 进程通信，系统服务 **ActivityTaskManagerService** 在启动目标 Activity 时，会先此 Activity 所属的进程是否在运行中。判断的方法实现如下：
+以 [Activity 的启动为例](/2021/03/16/activity-launch/)，发起调用的进程（如 launcher 进程）会通过 **Binder** 与 `system_server` 进程通信，系统服务 **ActivityTaskManagerService** 在启动目标 Activity 时，会先此 Activity 所属的进程是否在运行中。判断的方法实现如下：
 
 ```java
 boolean isProcessRunning() {

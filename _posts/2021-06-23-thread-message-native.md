@@ -8,7 +8,7 @@ tags:
 ---
 
 ## 前言
-在系列文章上篇 [Android 线程消息机制 —— Java 层消息模型](https://jasonwu1111.github.io/2021/06/07/thread-message-java/#android-线程消息机制模型) 中提到，Android 的线程消息模型是系统中一个非常重要且核心的机制，它重新定义了 Android 内线程运作以及线程间通信的机制，它贯通了整个 framework 层（包括 Java 和 Native）里很多重要的线程运作机理。
+在系列文章上篇 [Android 线程消息机制 —— Java 层消息模型](/2021/06/07/thread-message-java/#android-线程消息机制模型) 中提到，Android 的线程消息模型是系统中一个非常重要且核心的机制，它重新定义了 Android 内线程运作以及线程间通信的机制，它贯通了整个 framework 层（包括 Java 和 Native）里很多重要的线程运作机理。
 
 Java 层整体模型示例如下：
 ![](/img/posts/post-handler.png)
@@ -34,7 +34,7 @@ system/core/libutils/
 ```
 
 ## MessageQueue 对象的创建
-在介绍 [MessageQueue Java 类结构](https://jasonwu1111.github.io/2021/06/07/thread-message-java/#基本结构-1) 中有提及到，Java 层的 **MessageQueue** 对象在创建时会进一步通过 JNI 来创建一个 Native 对象：
+在介绍 [MessageQueue Java 类结构](/2021/06/07/thread-message-java/#基本结构-1) 中有提及到，Java 层的 **MessageQueue** 对象在创建时会进一步通过 JNI 来创建一个 Native 对象：
 
 ```java
 public final class MessageQueue {
@@ -304,7 +304,7 @@ int Looper::removeFd(int fd, int seq) {
 ```
 
 ### nativePollOnce
-在系列文章上篇 [Android 线程消息机制 —— Java 层消息模型](https://jasonwu1111.github.io/2021/06/07/thread-message-java/#android-线程消息机制模型) 中提到，在 Java 层 **MessageQueue** 的 `next()` 方法中，每次获取新的 Java 消息时，都会先调用 `nativePollOnce()` 方法来进入线程阻塞：
+在系列文章上篇 [Android 线程消息机制 —— Java 层消息模型](/2021/06/07/thread-message-java/#android-线程消息机制模型) 中提到，在 Java 层 **MessageQueue** 的 `next()` 方法中，每次获取新的 Java 消息时，都会先调用 `nativePollOnce()` 方法来进入线程阻塞：
 ```java
 Message next() {
     ...
