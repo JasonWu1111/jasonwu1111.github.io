@@ -101,29 +101,30 @@ frameworks/base/core/java/android/net/
 - 通过 Socket 通道向 `Zygote` 进程发送该参数，进入阻塞，等待 Socket 另一端 `Zygote` 进程返回新创建的应用进程 pid。
 
 ### Zygote 进程 fork 出应用进程
+<待补充...>
 
-```white
+<!-- ```white
 Title: 应用进程启动（三）
 participant RuntimeInit
 ZygoteInit->ZygoteServer: main()
 ZygoteServer->ZygoteConnection: runSelectLoop()
 ZygoteConnection->Zygote: processOneCommand()
 Zygote->Zygote: forkAndSpecialize()
-Zygote-->ZygoteConnection: pid
+Zygote-\->ZygoteConnection: pid
 Note over RuntimeInit,Zygote: 进入子进程
 ZygoteConnection->ZygoteInit: handleChildProc()
 ZygoteInit->RuntimeInit: zygoteInit()
 RuntimeInit->RuntimeInit: applicationInit()
 RuntimeInit->RuntimeInit: findStaticMain()
-RuntimeInit-->ZygoteInit: runnable
+RuntimeInit-\->ZygoteInit: runnable
 ZygoteInit->ZygoteInit: runnable.run()
 
 Title: 应用进程启动（四）
 Zygote->Zygote: forkAndSpecialize()
-Zygote-->JNI: nativeForkAndSpecialize()
+Zygote-\->JNI: nativeForkAndSpecialize()
 JNI->Linux: ForkCommon()
 Linux->Linux: fork()
-Linux-->Zygote: pid
+Linux-\->Zygote: pid
 
 Title: 应用进程启动（五）
 participant ActivityManagerService
@@ -133,10 +134,10 @@ participant LoadedApk
 participant Instrumentation
 ActivityThread->ActivityThread: main()
 ActivityThread->ActivityThread: attach()
-ActivityThread-->ActivityManagerService: attachApplication()
+ActivityThread-\->ActivityManagerService: attachApplication()
 ActivityManagerService->ActivityManagerService: attachApplication()
 ActivityManagerService->ActivityManagerService: attachApplicationLocked()
-ActivityManagerService-->ActivityThread$ApplicationThread: bindApplication()
+ActivityManagerService-\->ActivityThread$ApplicationThread: bindApplication()
 ActivityThread$ApplicationThread->ActivityThread: bindApplication() 
 ActivityThread->LoadedApk: handleBindApplication()
 LoadedApk->Instrumentation: makeApplication()
@@ -144,7 +145,7 @@ Instrumentation->Application: newApplication()
 Application->Application: attach()
 Application->Application: attachBaseContext()
 Application->Application: onCreate()
-```
+``` -->
 
 
 
