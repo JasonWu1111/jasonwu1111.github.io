@@ -120,6 +120,7 @@ private void startOtherServices() {
 在 Service 对象创建之后，回调其父类 `SystemService` *onStart* 方法，这样一个 Service 就算启动了。
 
 - SystemServiceManager.java
+
 ```java
 ...
 private final ArrayList<SystemService> mServices = new ArrayList<SystemService>();    

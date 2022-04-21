@@ -25,8 +25,6 @@ Android 的线程消息模型是系统中一个非常重要且核心的机制，
 
 **Looper、MessageQueue、Message、Handler** 这四个核心的角色各自承担自己的职责，构成了 Android 线程消息机制模型。
 
-**Looper、MessageQueue、Message、Handler** 这四个核心的角色各自承担自己的职责，构成了 Android 线程消息机制模型。
-
 **这一套线程消息机制在 Android Framework 中不仅是在 java 层，在 native 层同样可以应用**。本文优先介绍在线程消息机制 java 层的实现与应用（这同时也是日常开发最常接触的部分）。[**Native 层的实现与原理**]() 将在下一篇中做介绍。
 
 涉及到的源码文件有：
